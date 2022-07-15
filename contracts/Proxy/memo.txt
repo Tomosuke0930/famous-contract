@@ -1,0 +1,17 @@
+ProxyがStorageにLogic Contractの情報を持っていてそれをdelegeteCallで読んでいるだけ
+
+
+                         delegatecall
+User ---------->  Proxy  -----------> Implementation
+             (storage layer)          (logic lay
+
+
+
+      upgrade call
+Admin -----------> Proxy --x--> Implementation_v1
+                     |
+                      --------> Implementation_v2
+Proxy Resources
+https://dev.to/nvn/proxy-patterns-for-upgradeability-of-solidity-contracts-transparent-vs-uups-proxies-3ig2
+https://docs.openzeppelin.com/contracts/4.x/api/proxy#UUPSUpgradeable1
+https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies#proxy-forwarding
